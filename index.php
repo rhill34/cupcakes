@@ -1,28 +1,14 @@
 <?php
-function flavors()
-{
-    $array = array(
-        "grasshopper" => "The Grasshopper",
-        "maple"       => "Whiskey Maple Bacon",
-        "carrot"      => "Carrot Walnut",
-        "caramel"     =>"Salted Caramel Cupcake",
-        "velvet"      => "Red Velvet",
-        "lemon"       => "Lemon Drop",
-        "tiramisu"    => "Tiramisu"
-    );
-    return $array;
-}
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-function formCheckBoxes($flavorsArray)
-{
-    foreach ($flavorsArray as $flavor => $flavor_value)
-        echo '<input type="checkbox" name="cupcakes1[]" value="'.$flavor_value.'" id="'.$flavor.'"><label>'.$flavor_value.'</label><br>';
-}
+include 'functions.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
+    <meta charset='UTF-8'>
     <title>Cupcake Fundraiser</title>
 </head>
 <body>
@@ -75,8 +61,6 @@ function formCheckBoxes($flavorsArray)
         {
             echo "Order Total: $0.00";
         }
-
-        echo "<br>You can use the following form again to enter a new name.";
     }
     ?>
 </section>
